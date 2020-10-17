@@ -1,35 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int minimum(int arr[], int size){
-	int min = 99999;
-	for (int i=0;i<size;i++){
-		if(arr[i]<min)
-			min = arr[i];	
-	}
-	return min;
+
+int findElement(int vec[],int size,int n){
+    sort(vec,vec+(size-1));
+    return vec[n-1];
 }
 
-int maximum(int arr[], int size){
-	int max = -99999;
-	for (int i=0;i<size;i++){
-		if(arr[i]>max)
-			max = arr[i];	
-	}
-	return max;
-}
 
-int main(int argc, char const *argv[])
-{
-	int size;
-	cout<<"Enter size"<<endl;
-	cin>>size;
-	cout<<"Enter array:"<<endl;
-	int arr[size];
-	for (int i=0;i<size;i++){
-		cin>>arr[i];
+int main() {
+	//code
+	int t,size,n;
+	cin>>t;
+    int arr[size];
+	while(t--){
+	    cin>>size;
+	    for (int i=0;i<size;i++){
+	        cin>>arr[i];
+	    }
+	    cin>>n;
+	    cout<<findElement(arr,size,n)<<endl;
 	}
-	cout<<"Minimum: "<<minimum(arr,size)<<endl;
-	cout<<"Maximum: "<<maximum(arr,size)<<endl;	
+	
 	return 0;
 }
