@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// calulate max sum of contiguous subarray within a one-dimensional array of numbers which has the largest sum.
 int solution(int arr[],int size){
 	int maxTillHere = 0, maxSoFar = 0;
 	for(int i=0;i<size;i++){
